@@ -5,7 +5,7 @@ on:
     branches:
       - main
     tags:
-      - 'v*'  # 針對版本標籤（如 v1.0.0）進行構建
+      - 'v*'
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
 
     permissions:
       contents: read
-      packages: write  # 允許推送到 GHCR (必要)
+      packages: write
 
     steps:
       - name: Checkout repository

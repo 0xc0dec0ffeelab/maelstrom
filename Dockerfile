@@ -15,7 +15,7 @@ RUN mv target/maelstrom*standalone.jar maelstrom.jar
 FROM ${RUN_IMAGE} AS run
 WORKDIR /maelstrom
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     gnuplot \
     graphviz \
     && rm -rf /var/lib/apt/lists/*
